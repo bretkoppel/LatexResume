@@ -1,9 +1,10 @@
 \documentclass[11pt,a4paper,sans,english]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
 \moderncvstyle{banking}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
 \moderncvcolor{blue}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
-%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
 \usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
-\usepackage[scale=0.75,a4paper]{geometry}
+\usepackage[scale=0.8,a4paper,top=0.75cm,bmargin=.75cm,footnotesep=.5cm]{geometry}
+\recomputelengths 
 \usepackage{babel}
 %----------------------------------------------------------------------------------
 %            personal data
@@ -17,7 +18,7 @@
 %\fax{fax number}                             % optional, remove/comment the line if not wanted
 
 \email{bret@bretkoppel.com}                               % optional, remove/comment the line if not wanted
-\social[twitter]{@bretkoppel}
+\social[twitter]{bretkoppel}
 \social[linkedin]{bretkoppel}
 \homepage{bretkoppel.com}                         % optional, remove/comment the line if not wanted
 %\extrainfo{additional information}                 % optional, remove/comment the line if not wanted
@@ -27,20 +28,24 @@
 \begin{document}
 %-----       resume       ---------------------------------------------------------
 \makecvtitle
+\vspace*{-6mm}
 %\section{Master thesis}
 %\cvitem{title}{Title}
 %\cvitem{supervisors}{Supervisors}
 %\cvitem{description}{Short thesis abstract}
 \section{Experience}
 %\subsection{Vocational}
-\cventry{July 11--Present}{Co-Founder, CTO}{KIS Group}{kisgroup.com}{}{Sole developer and designer}
-\cvlistitem{Built site during off-work hours using ASP .NET MVC, Javascript, and SQL Server}
-\cvlistitem{Evaluated video service providers to determine the best fit for our startup budget and integrated provider libraries}
-\cventry{July 08--Present}{Senior Web Application Developer}{Burke, Inc.}{burke.com}{}{Full stack developer responsible for gathering and implementing custom reporting needs for clients at Fortune 50 companies.}
+\cventry{July 11--Present}{Co-Founder}{KIS Group}{kisgroup.com}{}{Sole developer and designer}
+\cvlistitem{Built site using ASP .NET MVC, Javascript, and SQL Server}
+\cvlistitem{Developed custom Lucene-driven video relationship system}
+%\cvlistitem{Worked with third party vendors and freelancers on specific aspects}
+\cvlistitem{Managed a team of four to develop an efficient content production flow}
+\cventry{October 06--Present}{Senior Web Application Developer}{Burke, Inc.}{burke.com}{}{Full stack developer gathering and implementing custom reporting needs for clients at Fortune 50 companies.}
 \cvlistitem{Gathered requirements and produced mock-ups of potential solutions to determine best fit for clients.}
 \cvlistitem{Developed database, server-side, and client-side solutions to report client data through a custom SQL Server/JavaScript/ASP.NET data visualization product I helped to architect.}
 \cvlistitem{Reduced costly errors and improved client experience by automating developer builds, introducing unit testing, and reducing the amount of data transferred while navigating our data visualization solution.}
 \cvlistitem{Drastically cut setup, deployment, and maintenance costs of our solution by building a custom data retrieval and transformation process to bridge the gap between our survey environment and our data visualization solution.}
+\cvlistitem{Lead small teams in the development of surveys and new features.}
 %\cventry{}{}{Independent}{maradyer.com}{}{}
 %\cvlistitem{Worked with designer and client to finalize a design}
 %\cvlistitem{Built site using Ruby, Middleman, and Javascript}
@@ -53,7 +58,7 @@
 \section{Computer Skills(Professional)}
 \cvitem{C\#, ASP .NET MVC/WebForms}{Unit Testing(nUnit, Moq); Performance
  analysis; WCF and WebAPI services; Third party library integration(oAuth, SAAS, etc.); Light IIS administration}
-\cvitem{Javascript}{jQuery, Bootstrap, Backbone, Loaders(YepNope, Lab, Head), Templating(Mustache, Hogan) }
+\cvitem{Javascript}{jQuery, Bootstrap, Loaders(YepNope, Lab, etc.), Templating(Mustache, Hogan, etc.) }
 \cvitem{SQL Server}{Database and table design; Stored procedure design; Security and role assignment; Performance, index, and query plan analysis}
 \cvitem{Balsamiq}{Complex mock-ups of requested features for stakeholder sign-off}
 %\cvdoubleitem{Category 1}{Comment}{Category 4}{Comment}
@@ -62,10 +67,10 @@
 \section{Computer Skills(Hobbyist)}
 \cvitemwithcomment{Ruby}{Exploring dynamic programming paradigms and DSLs}{Rails, Middleman, Chef}
 \cvitem{Clojure}{Exploring functional / lisp programming paradigms and parallelism}
-\cvitem{Machine Learning}{Analyzing large data sets to find common items and extrapolating findings to new data}
+%\cvitem{Machine Learning}{Analyzing large data sets to find common items and extrapolating findings to new data}
 \section{Community Involvement}
-\cvitem{Givecamp(southwestohiogivecamp.org, http://www.columbusgivecamp.org/)}{Helped small, non-profit organizations upgrade their internal and external technology by donating weekends}
-\cvitem{Conferences(Codemash, Central Ohio Day of .NET, Stir Trek)}{Annual conference attendee since 2011}
+\cvitem{Givecamp(southwestohiogivecamp.org, columbusgivecamp.org)}{Helped small, non-profit organizations upgrade their internal and external technology by donating weekends}
+\cvitem{Conferences(Codemash, Central Ohio Day of .NET)}{Annual conference attendee since 2011}
 %\section{Extra 1}
 %\cvlistitem{Item 1}
 %\cvlistitem{Item 2}
@@ -76,8 +81,10 @@
 %\cvlistdoubleitem{Item 3}{Item 6}
 \section{Education}
 \cventry{2001--2005}{BS, Computer Systems Analysis}{Miami University}{Oxford, OH}{}{}  % arguments 3 to 6 can be left empty
+%\vspace*{-5mm}
 \section{References}
-\cvitem{Available upon request}{}
+\cventry{}{}{Available upon request}{}{}{}  %
+%\cvitem{Available upon request}{}
 %\begin{cvcolumns}
 %  \cvcolumn{Category 1}{Comment}
 %  \cvcolumn{Category 2}{Comment}
@@ -92,5 +99,12 @@
 \closing{Yours faithfully,}
 \enclosure{enclosures}          % use an optional argument to use a string other than "Enclosure", or redefine \enclname
 \makelettertitle
+I'm a full stack **ASP.NET / SQL Server** web engineer looking for a position where I can make a difference... Working at (company), where I'll have the opportunity to (something) sounds like a great place to... (Not good)
+
+Although I'm now looking for a position where I can make a difference on a larger scale, I demonstrate my commitment each day to (improving internal things) in my current role. Early in my tenure I was noticed for my passion to improve the lives of my teammates and those who interact with our department. I made a name for myself by automating previously manual processes and revising inefficient ones. When one department's SQL work was slowing down another, I was the one getting phone calls to see if I could provide insight and relief. Soon I was promoted to web development where I brought that same passion to our team's internal tooling: setting up automated builds; introducing the group to unit testing; and automating long-running "watch and wait" processes. When (one of our company's second in commands) needed somebody to do this more officially, he specifically sought me out to offer me the opportunity. 
+
+I'm also committed to making a difference outside the office. I regularly participate in Givecamps - 48 hour weekend code-a-thons in which I solve a technical need for a charity who can't afford to have the work done. (flesh this out)
+
+I'm excited to bring my commitment to improvement to (your company) and look forward to hearing from you.
 \makeletterclosing
 \end{document}
